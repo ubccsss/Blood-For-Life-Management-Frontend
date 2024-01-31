@@ -18,7 +18,6 @@ export default function Events() {
           volunteers: 3,
           description: 'Description of Event 2'
         },
-        // Add more event objects as needed
       ];
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
