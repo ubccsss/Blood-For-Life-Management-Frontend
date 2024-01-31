@@ -3,7 +3,7 @@
 import React from 'react';
 
 interface EventProps {
-  id: string;
+  key: number;
   name: string;
   start: string;
   end: string;
