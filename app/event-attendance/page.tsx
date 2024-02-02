@@ -1,8 +1,8 @@
-import React from 'react';
-import Content from './EventAttendance'
+import React, { useState } from 'react';
+import EventAttendance from './EventAttendance';
 
-const EventAttendance = () => {
-    const event = {
+const EventAttendancePage = () => {
+    const [event, setEvent] = useState({
         name: 'Sample Event',
         start: '2024-02-01 09:00 PST',
         end: '2024-02-01 11:00 PST',
@@ -12,13 +12,22 @@ const EventAttendance = () => {
             { id: 3, name: 'Volunteer 3', attended: false }
         ],
         description: 'This is a sample event description.'
+    });
+
+    const updateAttendance = (volunteerId: number, attended: boolean) => {
+        setEvent(prevEvent => ({
+            ...prevEvent,
+            volunteers: prevEvent.volunteers.map(volunteer => 
+                volunteer.id === volunteerId ? { ...volunteer, attended: attended } : volunteer
+            )
+        }));
     };
 
     return (
         <div>
-            <Content event={event} updateAttendance={updateAttendance} />
+            <EventAttendance event={event} updateAttendance={updateAttendance} />
         </div>
     );
 }
 
-export default EventAttendance;
+export default EventAttendancePage;

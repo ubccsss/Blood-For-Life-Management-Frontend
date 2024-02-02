@@ -46,9 +46,4 @@ const Content: React.FC<EventAttendanceProps> = ({ event, updateAttendance }) =>
   );
 };
 
-const updateAttendance = (volunteerId: number, attended: boolean) => {
-  // should do sth later to update the state to reflect the change like on db
-  // console.log(`Volunteer ${volunteerId} attendance marked as: ${attended}`);
-};
-
 export default Content;
