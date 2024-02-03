@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import { Dialog, DialogActions, DialogContent, DialogContentText, 
         DialogTitle, FormControl, InputLabel, OutlinedInput, TextField } from '@mui/material';
-import './styles/dashboard.css'
+import '../styles/dashboard.css'
 
 
 
@@ -57,7 +57,7 @@ export default function FormDialog() {
             const email = formJson.email;
 
             console.log(email); /* optional for email input for possible notification */
-            sendData(formJson)
+            sendData(formJson);
             handleClose();
           },
         }}
@@ -109,8 +109,8 @@ export default function FormDialog() {
             autoFocus
             required
             margin='normal'
-            id="volunteers"
-            name="volunteers"
+            id="volunteersRequired"
+            name="volunteersRequired"
             className="volunteers-text"
             label="Volunteers Required"
             type="number"
