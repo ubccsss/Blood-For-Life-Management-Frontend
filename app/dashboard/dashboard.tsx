@@ -20,6 +20,26 @@ export default function FormDialog() {
     setOpen(false);
   };
 
+  const sendData = async (data: any) => {
+    try {
+        const response = await fetch("/api/create", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to send data to database");
+        }
+
+    } catch (error) {
+        console.error("Error:", error)
+    }
+  }
+
+
   return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
@@ -35,7 +55,9 @@ export default function FormDialog() {
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries((formData as any).entries());
             const email = formJson.email;
+
             console.log(email); /* optional for email input for possible notification */
+            sendData(formJson)
             handleClose();
           },
         }}
