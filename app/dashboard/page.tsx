@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import FormDialog from './dashboard'
-export default function Home() {
+import Dashboard from './dashboard'
+
+export default function Page() {
   return (
-    <FormDialog></FormDialog>
+      <Dashboard></Dashboard>
   )
 }
