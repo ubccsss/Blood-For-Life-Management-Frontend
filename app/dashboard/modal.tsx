@@ -62,6 +62,8 @@ const Modal= () => {
             const email = formJson.email;
 
             console.log(email); /* optional for email input for possible notification */
+            console.log(formJson);
+            
             sendData(formJson);
             handleClose();
 
@@ -79,6 +81,7 @@ const Modal= () => {
           
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateTimePicker
+            name="startDate"
             className="calendar">
           </DateTimePicker>
         </LocalizationProvider>
