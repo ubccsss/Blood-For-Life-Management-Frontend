@@ -1,9 +1,10 @@
 import GoogleButton from 'react-google-button'
 import { signIn } from "next-auth/react"
+import "../app/styles/card-component.css"
 
 export default function LoginCard() {
     return (
-        <section className="vh-100">
+        <section className="bg-indigo-500">
             <h1> Login </h1>
             <form>
                 <div>

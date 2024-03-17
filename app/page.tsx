@@ -1,8 +1,6 @@
 'use client'
 import Image from 'next/image'
-import GoogleButton from 'react-google-button'
-import { signIn } from "next-auth/react"
-import LoginCard from '../component/login-card'
+import LoginCard from '../components/login-card'
 
 export default function Home() {
   return (
