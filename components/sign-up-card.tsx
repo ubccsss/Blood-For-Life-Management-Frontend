@@ -1,15 +1,22 @@
-import { FormEvent, Dispatch, SetStateAction } from "react"
+import {FormEvent, useState, Dispatch, SetStateAction} from "react"
+import {useRouter} from "next/router"
 
 interface SignUpProps {
-    setSignUp : Dispatch<SetStateAction<boolean>>
+    setError : Dispatch<SetStateAction<boolean>>
 }
 
-// TODO Connect to an API implemented in the backend for user verification
-const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault()
-}
+const SignUpCard : React.FC<SignUpProps> = ({setError}) => {
 
-const SignUpCard : React.FC<SignUpProps> = ({setSignUp}) => {
+    // TODO Connect to an API implemented in the backend for user verification
+    const handleSubmit = async (event: FormEvent) => {
+        event.preventDefault()
+        if (true) { // replace with conditional depending on the value from the backend
+            const router = useRouter()
+            router.push("/dashboard")
+        } else
+            setError(true)
+    }
+
     return (
         <section className="vh-100">
             <h1> Sign Up </h1>
