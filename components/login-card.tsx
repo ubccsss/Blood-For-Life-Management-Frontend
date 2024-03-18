@@ -9,14 +9,12 @@ interface LoginProps {
 
 const LoginCard : React.FC<LoginProps> = ({setSignUp}) => {
     return (
-        <section className="bg-indigo-500">
+        <section>
             <h1> Login </h1>
             <form>
-                <div>
-                    <input type="email" id="email-field" placeholder="Email" />
-                    <input type="password" id="password-field" placeholder="Password" />
-                    <button type="submit"> Login </button>
-                </div>
+                <input type="email" id="email-field" placeholder="Email" />
+                <input type="password" id="password-field" placeholder="Password" />
+                <input className="submit-button" type="submit" value="Login"/>
             </form>
             <hr />
             <GoogleButton onClick={() => signIn('google')}></GoogleButton>
