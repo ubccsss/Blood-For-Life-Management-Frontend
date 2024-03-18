@@ -1,6 +1,21 @@
 'use client'
-import Image from 'next/image'
+import {useState} from 'react'
 import LoginCard from '../components/login-card'
+import SignUpCard from '@/components/sign-up-card'
+
+const [signUp, setSignUp] = useState(false)
+
+const renderRegistrationCards = () => {
+  if (signUp) {
+    return <LoginCard
+    setSignUp={setSignUp}
+    />
+  } else {
+    return <SignUpCard
+    setSignUp={setSignUp}
+    />
+  }
+}
 
 export default function Home() {
   return (
@@ -8,7 +23,7 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <h1>Blood for Life Home Page </h1>
       </div>
-      <LoginCard />
+      {renderRegistrationCards()}
     </main>
   )
 }
