@@ -1,5 +1,5 @@
 'use client'
-import {useState} from 'react'
+import { useState } from 'react'
 import LoginCard from '../components/login-card'
 import SignUpCard from '@/components/sign-up-card'
 import Alert from '@mui/material/Alert';
@@ -11,22 +11,21 @@ export default function Home() {
   const renderRegistrationCards = () => {
     if (signUp) {
       return <SignUpCard
-      setError={setError}
+        setError={setError}
       />
     } else {
       return <LoginCard
-      setSignUp={setSignUp}
+        setSignUp={setSignUp}
       />
     }
   }
-  
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex flex-col self-center items-center">
       {error && <Alert variant="filled" severity="error"> Registration failed! Please try again! </Alert>}
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1>Blood for Life Home Page </h1>
-      </div>
-      {renderRegistrationCards()}
+      <h1 className='text-white'>Blood for Life Home Page </h1>
+      <SignUpCard setError={setError} />
+      {/* {renderRegistrationCards()} */}
     </main>
   )
 }

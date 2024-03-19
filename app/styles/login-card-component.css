@@ -1,0 +1,78 @@
+section {
+    background-color: #f6f5ec;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    transition: 0.3s;
+    width: 22rem;
+    height: 30rem;
+    padding: 2rem 2rem 2rem 2rem;
+    /* top, right, left, bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+hr {
+    background-color: black;
+    height: 4px;
+    border: None;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    margin-top: 1rem;
+    background-color: #17ce8b;
+    border: none;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 1rem;
+    color: black;
+}
+
+a {
+    font-weight: bold;
+    color: grey
+}
+
+a:hover {
+    font-weight: bold;
+    color: rgb(184, 176, 176)
+}
+
+form {
+    width: 15rem;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    color: black;
+    align-self: center;
+}

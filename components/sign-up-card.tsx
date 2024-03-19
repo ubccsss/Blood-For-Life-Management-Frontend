@@ -1,11 +1,12 @@
-import {FormEvent, useState, Dispatch, SetStateAction} from "react"
-import {useRouter} from "next/router"
+import { FormEvent, useState, Dispatch, SetStateAction } from "react"
+import { useRouter } from "next/router"
+import "../app/styles/sign-up-card-component.css"
 
 interface SignUpProps {
-    setError : Dispatch<SetStateAction<boolean>>
+    setError: Dispatch<SetStateAction<boolean>>
 }
 
-const SignUpCard : React.FC<SignUpProps> = ({setError}) => {
+const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
 
     // TODO Connect to an API implemented in the backend for user verification
     const handleSubmit = async (event: FormEvent) => {
@@ -18,16 +19,26 @@ const SignUpCard : React.FC<SignUpProps> = ({setError}) => {
     }
 
     return (
-        <section className="vh-100">
+        <section>
             <h1> Sign Up </h1>
+            <hr className="" />
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" id="first-name-field" placeholder="First Name" />
                     <input type="text" id="last-name-field" placeholder="Last Name" />
-                    <input type="text" id="student-number-field" placeholder="Student Number" />
+                </div>
+
+                <div>
                     <input type="email" id="email-field" placeholder="Email" />
                     <input type="password" id="password-field" placeholder="Password" />
-                    <button type="submit"> Done </button>
+                </div>
+
+                <div>
+                    <input type="text" id="student-number-field" placeholder="Student Number" />
+                </div>
+
+                <div>
+                    <input type="submit" className="submit-button" value="Submit" />
                 </div>
             </form>
         </section >
