@@ -24,8 +24,8 @@ export default function Home() {
     <main className="flex flex-col self-center items-center">
       {error && <Alert variant="filled" severity="error"> Registration failed! Please try again! </Alert>}
       <h1 className='text-white'>Blood for Life Home Page </h1>
-      {/* <SignUpCard setError={setError} /> */}
-      {renderRegistrationCards()}
+      <SignUpCard setError={setError} />
+      {/* {renderRegistrationCards()} */}
     </main>
   )
 }

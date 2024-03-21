@@ -3,16 +3,16 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     transition: 0.3s;
-    width: 70rem;
+    width: 55rem;
     height: 35rem;
-    padding: 4rem 2rem 5rem 2rem;
+    padding: 5rem 3rem 5rem 3rem;
     /* top, right, left, bottom */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sign-up-title {
+.sign-up-h1 {
     width: 100%;
     text-align: center;
     color: black;
@@ -22,6 +22,10 @@
 
 .sign-up-submit-button {
     margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
     background-color: #04AA6D;
     border: none;
     color: white;
@@ -32,17 +36,16 @@
 
 .sign-up-submit-button:hover {
     margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
     background-color: #17ce8b;
     border: none;
     color: white;
     width: 100%;
     display: block;
     cursor: pointer;
-}
-
-.sign-up-p {
-    margin-top: 1rem;
-    color: black;
 }
 
 .sign-up-form {
@@ -55,6 +58,7 @@
 .sign-up-input {
     width: 100%;
     margin: .5rem;
+    height: 3rem;
     padding: .8rem .8rem .8rem .8rem;
     color: black;
     align-self: stretch;

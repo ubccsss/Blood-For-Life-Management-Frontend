@@ -1,6 +1,6 @@
 import { FormEvent, useState, Dispatch, SetStateAction } from "react"
 import { useRouter } from "next/router"
-import "../app/styles/sign-up-card-component.css"
+import "../app/styles/sign-up-card.css"
 
 interface SignUpProps {
     setError: Dispatch<SetStateAction<boolean>>
@@ -19,25 +19,25 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
     }
 
     return (
-        <section>
-            <h1> Sign Up </h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input type="text" id="first-name-field" placeholder="First Name" />
-                    <input type="text" id="last-name-field" placeholder="Last Name" />
+        <section className="sign-up-card">
+            <h1 className="sign-up-h1"> Sign Up </h1>
+            <form className="sign-up-form" onSubmit={handleSubmit}>
+                <div className="sign-up-div">
+                    <input className="sign-up-input" type="text" id="first-name-field" placeholder="First Name" />
+                    <input className="sign-up-input" type="text" id="last-name-field" placeholder="Last Name" />
                 </div>
 
-                <div>
-                    <input type="email" id="email-field" placeholder="Email" />
-                    <input type="password" id="password-field" placeholder="Password" />
+                <div className="sign-up-div">
+                    <input className="sign-up-input" type="email" id="email-field" placeholder="Email" />
+                    <input className="sign-up-input" type="password" id="password-field" placeholder="Password" />
                 </div>
 
-                <div>
-                    <input type="text" id="student-number-field" placeholder="Student Number" />
+                <div className="sign-up-div">
+                    <input className="sign-up-input" type="text" id="student-number-field" placeholder="Student Number" />
                 </div>
 
-                <div>
-                    <input type="submit" className="submit-button" value="Submit" />
+                <div className="sign-up-div">
+                    <input type="submit" className="sign-up-submit-button" value="Submit" />
                 </div>
             </form>
         </section>
