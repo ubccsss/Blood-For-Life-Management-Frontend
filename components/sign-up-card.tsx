@@ -21,7 +21,6 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
     return (
         <section>
             <h1> Sign Up </h1>
-            <hr className="" />
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" id="first-name-field" placeholder="First Name" />
@@ -41,7 +40,7 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
                     <input type="submit" className="submit-button" value="Submit" />
                 </div>
             </form>
-        </section >
+        </section>
     )
 }
 

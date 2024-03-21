@@ -1,10 +1,10 @@
-section {
+.sign-up-card {
     background-color: #f6f5ec;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     transition: 0.3s;
-    width: 60vw;
-    height: 70vh;
+    width: 70rem;
+    height: 35rem;
     padding: 4rem 2rem 5rem 2rem;
     /* top, right, left, bottom */
     display: flex;
@@ -12,49 +12,47 @@ section {
     align-items: center;
 }
 
-h1 {
+.sign-up-title {
     width: 100%;
     text-align: center;
-    margin-bottom: 5rem;
     color: black;
     font-weight: bold;
     font-size: 3rem;
 }
 
-.submit-button {
+.sign-up-submit-button {
     margin-top: 1rem;
     background-color: #04AA6D;
     border: none;
     color: white;
-    text-decoration: none;
     width: 100%;
     display: block;
     cursor: pointer;
 }
 
-.submit-button:hover {
+.sign-up-submit-button:hover {
     margin-top: 1rem;
     background-color: #17ce8b;
     border: none;
     color: white;
-    text-decoration: none;
     width: 100%;
     display: block;
     cursor: pointer;
 }
 
-p {
+.sign-up-p {
     margin-top: 1rem;
     color: black;
 }
 
-form {
-    width: 50vw;
+.sign-up-form {
+    margin: 1rem 1rem 1rem 1rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
 }
 
-input {
+.sign-up-input {
     width: 100%;
     margin: .5rem;
     padding: .8rem .8rem .8rem .8rem;
@@ -62,7 +60,7 @@ input {
     align-self: stretch;
 }
 
-input:hover {
+.sign-up-input:hover {
     width: 100%;
     margin: .5rem;
     padding: .8rem .8rem .8rem .8rem;
@@ -70,7 +68,7 @@ input:hover {
     align-self: stretch;
 }
 
-div {
+.sign-up-div {
     display: flex;
     flex-direction: row;
     align-self: stretch;

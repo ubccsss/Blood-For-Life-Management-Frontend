@@ -1,4 +1,4 @@
-section {
+.login-card {
     background-color: #f6f5ec;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
@@ -12,67 +12,68 @@ section {
     align-items: center;
 }
 
-h1 {
-    margin-bottom: 2rem;
+.login-card-title {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
     color: black;
     font-weight: bold;
     font-size: 3rem;
 }
 
-hr {
-    background-color: black;
-    height: 4px;
-    border: None;
-}
-
-.submit-button {
-    margin-top: 1rem;
+.login-submit-button {
     background-color: #04AA6D;
     border: none;
     color: white;
-    text-decoration: none;
+    height: 3rem;
     width: 100%;
     display: block;
     cursor: pointer;
 }
 
-.submit-button:hover {
-    margin-top: 1rem;
-    background-color: #17ce8b;
+.login-submit-button:hover {
+    background-color: #26cb8f;
     border: none;
     color: white;
-    text-decoration: none;
+    height: 3rem;
     width: 100%;
     display: block;
     cursor: pointer;
 }
 
-p {
-    margin-top: 1rem;
+.sign-up-line {
+    margin-top: 1.5rem;
     color: black;
 }
 
-a {
+.login-form-divider {
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-width: 1px;
+    border-color: rgb(194, 187, 164);
+}
+
+.sign-up-link {
     font-weight: bold;
     color: grey
 }
 
-a:hover {
+.sign-up-link:hover {
     font-weight: bold;
     color: rgb(184, 176, 176)
 }
 
-form {
+.login-form {
     width: 15rem;
-    padding-bottom: 15px;
+    margin-top: 1rem;
+    margin-bottom: .75rem;
     display: flex;
     flex-direction: column;
 }
 
-input {
+.login-input {
     width: 100%;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+    height: 3rem;
     color: black;
     align-self: center;
 }
