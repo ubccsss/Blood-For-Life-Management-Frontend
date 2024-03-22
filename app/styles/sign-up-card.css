@@ -1,8 +1,9 @@
 .sign-up-card {
-    background-color: #f6f5ec;
+    background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     transition: 0.3s;
+    opacity: 85%;
     width: 55rem;
     height: 35rem;
     padding: 5rem 3rem 5rem 3rem;
@@ -26,7 +27,7 @@
     margin-right: .5rem;
     height: 3rem;
     width: 100%;
-    background-color: #04AA6D;
+    background-color: #2fc1a3;
     border: none;
     color: white;
     width: 100%;
@@ -40,7 +41,7 @@
     margin-right: .5rem;
     height: 3rem;
     width: 100%;
-    background-color: #17ce8b;
+    background-color: #77cdc4;
     border: none;
     color: white;
     width: 100%;
@@ -68,7 +69,7 @@
     width: 100%;
     margin: .5rem;
     padding: .8rem .8rem .8rem .8rem;
-    background-color: rgb(235, 229, 229);
+    background-color: #f7f7f7;
     align-self: stretch;
 }
 

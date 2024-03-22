@@ -1,5 +1,4 @@
 import { FormEvent, useState, Dispatch, SetStateAction } from "react"
-import { useRouter } from "next/router"
 import "../app/styles/sign-up-card.css"
 
 interface SignUpProps {
@@ -7,15 +6,17 @@ interface SignUpProps {
 }
 
 const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
-
     // TODO Connect to an API implemented in the backend for user verification
-    const handleSubmit = async (event: FormEvent) => {
+    async function handleSubmit(event: FormEvent) {
         event.preventDefault()
-        if (true) { // replace with conditional depending on the value from the backend
-            const router = useRouter()
-            router.push("/dashboard")
-        } else
+        // Redirect to user's dashboard if true. Otherwise, stay on this page and display an error banner
+        if (true) {
+            console.log('Clicking')
+            window.location.href = "/dashboard";
+            setError(false)    // disables banner if active
+        } else {
             setError(true)
+        }
     }
 
     return (
@@ -29,7 +30,7 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
 
                 <div className="sign-up-div">
                     <input className="sign-up-input" type="email" id="email-field" placeholder="Email" />
-                    <input className="sign-up-input" type="password" id="password-field" placeholder="Password" />
+                    <input className="sign-up-input" type="password" id="password-field" placeholder="Password" minLength={8} />
                 </div>
 
                 <div className="sign-up-div">
