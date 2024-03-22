@@ -9,18 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-
-    "@emotion/react": "^11.11.3",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.7",
-    "@mui/x-date-pickers": "^6.19.5",
+    "@mui/icons-material": "^5.14.6",
+    "@mui/material": "^5.14.6",
+    "@mui/x-date-pickers": "^5.0.12",
+    "@types/react-big-calendar": "^1.8.9",
+    "cldr-data": "^36.0.1",
+    "date-fns": "^2.30.0",
     "dayjs": "^1.11.10",
+    "globalize": "^1.7.0",
+    "iana-tz-data": "^2019.1.0",
     "next": "^14.1.0",
     "next-auth": "^4.24.6",
     "react": "^18.2.0",
+    "react-big-calendar": "^1.11.2",
+    "react-colorful": "^5.6.1",
     "react-dom": "^18.2.0",
-    "react-google-button": "^0.7.2"
-
+    "react-google-button": "^0.7.2",
+    "sass": "^1.72.0"
   },
   "devDependencies": {
     "@types/node": "^20",
