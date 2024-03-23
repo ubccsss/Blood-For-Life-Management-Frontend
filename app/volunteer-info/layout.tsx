@@ -15,7 +15,9 @@ export default function VolunteerInfoLayout({ children }: { children: React.Reac
                             style={{ width: "2.5vw", height: "2.5vw" }}
                         />
                     </div>
-                    <div className="w-[94vw] h-[3vw] bg-[#9DE1DA] rounded-r-2xl"></div>
+                    <div className="w-[94vw] h-[3vw] bg-[#9DE1DA] rounded-r-2xl flex flex-row items-center justify-start">
+                        <h1 className="text-[#FF5555] p-4 font-bold text-lg">Volunteer Information</h1>
+                    </div>
                 </div>
 
                 <div className="flex flex-row h-full">
