@@ -13,7 +13,7 @@ export default function VolunteerInfo() {
 
     return (
         <div className="h-full w-full flex flex-col">
-            <div className="flex flex-col mb-5">
+            <div className="flex flex-col mb-8">
                 <div className="flex flex-row">
                     <h1 className="font-bold text-lg mb-3">Search:</h1>
                 </div>
