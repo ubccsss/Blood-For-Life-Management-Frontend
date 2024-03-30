@@ -1,8 +1,6 @@
 .sign-up-card {
     background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    transition: 0.3s;
     opacity: 85%;
     width: 55rem;
     height: 35rem;
