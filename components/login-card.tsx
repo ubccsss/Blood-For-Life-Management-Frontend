@@ -12,8 +12,8 @@ const LoginCard: React.FC<LoginProps> = ({ setSignUp }) => {
         <section className='login-card'>
             <h1 className='login-card-title'> Login </h1>
             <form className='login-form'>
-                <input className='login-input' type="email" id="email-field" placeholder="Email" autoFocus />
-                <input className='login-input' type="password" id="password-field" placeholder="Password" autoFocus />
+                <input required className='login-input' type="email" id="email-field" placeholder="Email" maxLength={128} autoFocus />
+                <input required className='login-input' type="password" id="password-field" placeholder="Password" maxLength={128} autoFocus />
                 <input className='login-submit-button' type="submit" value="Login" />
             </form>
             <hr className='login-form-divider' />

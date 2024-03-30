@@ -6,11 +6,11 @@ interface SignUpProps {
 }
 
 const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
-    // TODO Connect to an API implemented in the backend for user verification
+    // TODO Connect to backend API (DNE yet ATTOW) for user verification
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
         // Redirect to user's dashboard if true. Otherwise, stay on this page and display an error banner
-        if (true) {
+        if (false) {
             console.log('Clicking')
             window.location.href = "/dashboard";
             setError(false)    // disables banner if active
@@ -24,17 +24,17 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
             <h1 className="sign-up-h1"> Sign Up </h1>
             <form className="sign-up-form" onSubmit={handleSubmit}>
                 <div className="sign-up-div">
-                    <input className="sign-up-input" type="text" id="first-name-field" placeholder="First Name" />
-                    <input className="sign-up-input" type="text" id="last-name-field" placeholder="Last Name" />
+                    <input className="sign-up-input" required type="text" maxLength={128} id="first-name-field" placeholder="First Name" pattern="([A-Z]|[a-z])+" title="Please enter only letters for first name (A-Z or a-z)" />
+                    <input className="sign-up-input" required type="text" maxLength={128} id="last-name-field" placeholder="Last Name" pattern="([A-Z]|[a-z])+" title="Please enter only letters for last name (A-Z or a-z)" />
                 </div>
 
                 <div className="sign-up-div">
-                    <input className="sign-up-input" type="email" id="email-field" placeholder="Email" />
-                    <input className="sign-up-input" type="password" id="password-field" placeholder="Password" minLength={8} />
+                    <input className="sign-up-input" required type="email" maxLength={128} id="email-field" placeholder="Email" />
+                    <input className="sign-up-input" required type="password" id="password-field" placeholder="Password" minLength={8} maxLength={128} />
                 </div>
 
                 <div className="sign-up-div">
-                    <input className="sign-up-input" type="text" id="student-number-field" placeholder="Student Number" />
+                    <input className="sign-up-input" required type="text" id="student-number-field" placeholder="Student Number" minLength={8} maxLength={8} pattern="\d+" title="Please enter digits for student number (0-9)" />
                 </div>
 
                 <div className="sign-up-div">
