@@ -3,9 +3,10 @@ import "../app/styles/sign-up-card.css"
 
 interface SignUpProps {
     setError: Dispatch<SetStateAction<boolean>>
+    setSignUp: Dispatch<SetStateAction<boolean>>
 }
 
-const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
+const SignUpCard: React.FC<SignUpProps> = ({ setError, setSignUp }) => {
     // TODO Connect to backend API (DNE yet ATTOW) for user verification
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
@@ -38,6 +39,7 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError }) => {
                 </div>
 
                 <div className="sign-up-div">
+                    <button className="sign-up-back-button" onClick={() => setSignUp(false)}> Back </button>
                     <input type="submit" className="sign-up-submit-button" value="Submit" />
                 </div>
             </form>
