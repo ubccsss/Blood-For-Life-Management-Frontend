@@ -1,0 +1,107 @@
+.sign-up-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    opacity: 85%;
+    width: 55rem;
+    height: 35rem;
+    padding: 5rem 3rem 5rem 3rem;
+    /* top, right, left, bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-h1 {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.sign-up-back-button {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #2fc1a3;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.sign-up-back-button:hover {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #77cdc4;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.sign-up-submit-button {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #2fc1a3;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.sign-up-submit-button:hover {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #77cdc4;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.sign-up-form {
+    margin: 1rem 1rem 1rem 1rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-input {
+    width: 100%;
+    margin: .5rem;
+    height: 3rem;
+    padding: .8rem .8rem .8rem .8rem;
+    color: black;
+    align-self: stretch;
+}
+
+.sign-up-input:hover {
+    width: 100%;
+    margin: .5rem;
+    padding: .8rem .8rem .8rem .8rem;
+    background-color: #f7f7f7;
+    align-self: stretch;
+}
+
+.sign-up-div {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    border: none;
+}
