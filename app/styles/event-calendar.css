@@ -6,12 +6,13 @@
 /* VARIABLES */
 
 :root {
-  --main-color: #1a8fff;
+  --main-color: #00C79E;
   --text-color: #777;
   --text-color-light: #ccc;
   --border-color: #eee;
   --bg-color: #f9f9f9;
   --neutral-color: #fff;
+  --hover-color: #d8f5f2;
 }
 
 
@@ -108,7 +109,6 @@ main {
 }
 
 .calendar .header .icon:hover {
-  transform: scale(1.75);
   transition: .25s ease-out;
   color: var(--main-color);
 }
@@ -141,13 +141,13 @@ main {
 }
 
 .calendar .body .cell:hover {
-  background: var(--bg-color);
+  background: var(--hover-color);
   transition: 0.5s ease-out;
 }
 
 .calendar .body .selected {
   border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
+  background: var(--hover-color);
   border-image-slice: 1;
 }
 
@@ -190,8 +190,8 @@ main {
   letter-spacing: -.07em;
 }
 
+
 .calendar .body .cell:hover .bg, .calendar .body .selected .bg  {
-  opacity: 0.05;
   transition: .5s ease-in;
 }
 

@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div style={{background: "blue"}}>
     <FormDialog></FormDialog>
-    <EventCalendar dateFormat={day} />
     </div>
 
   )
