@@ -3,19 +3,70 @@
 import React from "react";
 import * as dateFns from "date-fns";
 
+interface Event {
+  id: number;
+  name: string;
+  startDate: Date;
+  endDate: Date;
+  volunteers: number;
+  description: string;
+}
+
 class EventCalendar extends React.Component {
   // sample events:
 
-  events = [
+  events: Event[] = [
     {
       id: 1,
-      name: 'Fundraiswer',
-      startDate: new Date(),
-      endDate: new Date(),
+      name: 'Krispy Kreme Fundraiser',
+      startDate: new Date(2024, 2, 27, 5, 0),
+      endDate: new Date(2024, 2, 27, 6, 0),
       volunteers: 5,
       description: 'Krsipy Kreme fundraiser at the nest outside of room 4021.\n'
+    },    
+    {
+      id: 2,
+      name: 'Boothing',
+      startDate: new Date(2024, 2, 21, 5, 0),
+      endDate: new Date(2024, 2, 21, 6, 0),
+      volunteers: 5,
+      description: 'Club boothing at the nest.\n'
     },
+    {
+      id: 3,
+      name: 'Blood collection',
+      startDate: new Date(2024, 2, 10, 5, 0),
+      endDate: new Date(2024, 2, 10, 6, 0),
+      volunteers: 5,
+      description: 'Club boothing at the nest.\n'
+    },
+    {
+      id: 5,
+      name: 'Meeting',
+      startDate: new Date(2024, 2, 27, 5, 0),
+      endDate: new Date(2024, 2, 27, 6, 0),
+      volunteers: 5,
+      description: 'General meeting.\n'
+    }, 
   ];
+
+  event_dict: { [key: string]: Event[] } = {};
+
+  componentDidMount() {
+    const today = new Date(); // Get the current date
+    this.setState({ selectedDate: today });
+
+    if (Object.keys(this.event_dict).length === 0) {
+      this.events.forEach((e) => {
+        const key = dateFns.format(e.startDate, "yyyy-MM-dd");
+        if (this.event_dict[key]) {
+          this.event_dict[key].push(e);
+        } else {
+          this.event_dict[key] = [e];
+        }
+      });
+    }
+  }
 
   state = {
     currentYear: new Date(),
@@ -39,60 +90,39 @@ class EventCalendar extends React.Component {
       </div>
     )
   }
+
   renderHeader() {
     const dateFormat = "MMMM yyyy";
 
     return (
       <div className="header row flex-middle">
         <div className="col col-start">
-          <div className="icon" onClick={this.prevMonth}>
+          <div className="control" onClick={this.prevMonth} key="prev">
             prev
           </div>
         </div>
-        <div className="col col-center">
+        <div className="col col-center" key="month">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
         </div>
-        <div className="col col-end" onClick={this.nextMonth}>
-          <div className="icon">next</div>
+        <div className="col col-end" onClick={this.nextMonth} key="next">
+          <div className="control">next</div>
         </div>
       </div>
     );
   }
 
   renderDays() {
-    const days = [];
-
-    days.push(
-    <div className="col col-center" key={0}>
-       {"sunday"} 
-    </div>);
-    days.push(
-        <div className="col col-center" key={1}>
-           {"monday"} 
-        </div>
-        );
-    days.push(
-        <div className="col col-center" key={2}>
-           {"tuesday"} 
-        </div>);
-    days.push(
-        <div className="col col-center" key={3}>
-           {"wednesday"} 
-        </div>);
-    days.push(
-        <div className="col col-center" key={4}>
-           {"thrusday"} 
-        </div>);
-    days.push(
-        <div className="col col-center" key={5}>
-           {"friday"} 
-        </div>);
-    days.push(
-        <div className="col col-center" key={6}>
-           {"saturday"} 
-        </div>);
-
-    return <div className="days row">{days}</div>;
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+    return (
+      <div className="days row">
+        {days.map((day) => (
+          <div className="col col-center" key={day}>
+            {day}
+          </div>
+        ))}
+      </div>
+    );
   }
 
   renderCells() {
@@ -113,8 +143,10 @@ class EventCalendar extends React.Component {
       for (let i = 0; i < 7; i++) {
         formattedDate = dateFns.format(day, dateFormat);
         const cloneDay = day;
+        const eventsForDay = this.event_dict[dateFns.format(day, "yyyy-MM-dd")];
         days.push(
           <div
+            key={cloneDay}
             className={`col cell ${
               !dateFns.isSameMonth(day, monthStart)
                 ? "disabled"
@@ -124,9 +156,15 @@ class EventCalendar extends React.Component {
           >
             <span className="number">{formattedDate}</span>
             <span className="bg">{formattedDate}</span>
-            <span className="event">{events}</span>
+            {Array.isArray(eventsForDay) && 
+              eventsForDay.map((e: Event) => (
+                <div key={e.id} className="event">
+                  <p>{e.name}</p>
+                </div>
+              ))}
           </div>
         );
+        //console.log(eventsForDay);
         day = dateFns.addDays(day, 1);
       }
       rows.push(
@@ -158,6 +196,7 @@ class EventCalendar extends React.Component {
   };
 
   render() {
+    console.log(this.event_dict);
     return (
       <div className="calendar">
         {this.renderHeader()}
