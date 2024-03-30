@@ -11,7 +11,7 @@ const SignUpCard: React.FC<SignUpProps> = ({ setError, setSignUp }) => {
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
         // Redirect to user's dashboard if true. Otherwise, stay on this page and display an error banner
-        if (false) {
+        if (true) {
             console.log('Clicking')
             window.location.href = "/dashboard";
             setError(false)    // disables banner if active

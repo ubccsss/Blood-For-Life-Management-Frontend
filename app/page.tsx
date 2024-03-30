@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 
 export default function Home() {
   const [signUp, setSignUp] = useState(false)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
 
   const renderRegistrationCards = () => {
     if (signUp) {
