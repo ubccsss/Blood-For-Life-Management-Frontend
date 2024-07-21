@@ -1,0 +1,85 @@
+.login-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    opacity: 85%;
+    width: 22rem;
+    height: 30rem;
+    padding: 2rem 2rem 2rem 2rem;
+    /* top, right, left, bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-card-title {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.login-submit-button {
+    background-color: #2fc1a3;
+    border: none;
+    color: white;
+    height: 3rem;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.login-submit-button:hover {
+    background-color: #77cdc4;
+    border: none;
+    color: white;
+    height: 3rem;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.sign-up-line {
+    margin-top: 1.5rem;
+    color: black;
+}
+
+.login-form-divider {
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-width: 1px;
+    border-color: #f7f7f7;
+}
+
+.sign-up-link {
+    font-weight: bold;
+    color: grey
+}
+
+.sign-up-link:hover {
+    font-weight: bold;
+    color: rgb(184, 176, 176)
+}
+
+.login-form {
+    width: 15rem;
+    margin-top: 1rem;
+    margin-bottom: .75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input {
+    width: 100%;
+    height: 3rem;
+    color: black;
+    align-self: center;
+}
+
+.login-input:hover {
+    width: 100%;
+    height: 3rem;
+    background-color: #f7f7f7;
+    align-self: stretch;
+}
